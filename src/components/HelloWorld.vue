@@ -44,6 +44,8 @@ export default class HelloWorld extends Vue {
 
   mounted() {
     console.log('HelloWorld :: mounted')
+    console.log('Das muss hier break pointen...')
+    // debugger
     return 100
   }
 }
