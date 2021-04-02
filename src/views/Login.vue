@@ -2,10 +2,10 @@
   <div>
     <h1>This is the login/logout page</h1>
     <form id="loginform" name="loginform">
-        <input type="text" id="username" name="username" max="50"/>
-        <input type="password" id="password" name="password"/>
-        <button id="loginbutton" name="loginbutton" v-on:click="startLogin" title="Login">Login</button>
-        <button id="resetbutton" name="resetbutton" v-on:click="reset" title="Reset">Reset</button>
+      <input type="text" id="username" name="username" max="50"/>
+      <input type="password" id="password" name="password"/>
+      <button id="loginbutton" name="loginbutton" v-on:click="startLogin" title="Login">Login</button>
+      <button id="resetbutton" name="resetbutton" v-on:click="reset" title="Reset">Reset</button>
     </form>
   </div>
 </template>
