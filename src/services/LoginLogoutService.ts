@@ -1,26 +1,20 @@
-import Vue from 'vue';
-import axios, { AxiosStatic } from 'axios';
+import Http from './HttpService'
 
-axios.defaults.baseURL = 'http://localhost:9090';
-Vue.prototype.$axios = axios;
-declare module 'vue/types/vue' {
-    interface Vue {
-        $axios: AxiosStatic;
-    }
-}
+class PingService {
 
-export class PingService {
-
-    ping(): void {
-        axios.get('/ping')
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
-            .then(function () {
-            });
-    }
+  ping(): void {
+    Http.get('/registrationservice/ping')
+      .then(function(response) {
+        console.log(response)
+      })
+      .catch(function(error) {
+        console.log(error)
+      })
+      .then(function() {
+        console.log('finished')
+      })
+  }
 
 }
+
+export default new PingService()
