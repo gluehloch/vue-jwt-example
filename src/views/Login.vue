@@ -26,13 +26,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-import PingService from '../services/LoginLogoutService';
+// import PingService from '../services/LoginLogoutService';
 
 @Component
 export default class Login extends Vue {
     startLogin(): void {
         console.log('Login :: startLogin');
-        PingService.ping();
+        // PingService.ping();
     }
 
     reset(): void {
