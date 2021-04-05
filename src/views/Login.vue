@@ -4,7 +4,7 @@
         <form id="loginform" name="loginform">
             <input type="text" id="username" name="username" max="50" />
             <input type="password" id="password" name="password" />
-            <button
+            <button type="button"
                 id="loginbutton"
                 name="loginbutton"
                 v-on:click="startLogin"
@@ -12,7 +12,7 @@
             >
                 Login
             </button>
-            <button
+            <button type="button"
                 id="resetbutton"
                 name="resetbutton"
                 v-on:click="reset"
@@ -26,13 +26,13 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-// import PingService from '../services/LoginLogoutService';
+import PingService from '../services/LoginLogoutService';
 
 @Component
 export default class Login extends Vue {
     startLogin(): void {
         console.log('Login :: startLogin');
-        // PingService.ping();
+        PingService.ping();
     }
 
     reset(): void {
