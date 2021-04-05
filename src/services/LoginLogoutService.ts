@@ -1,20 +1,33 @@
-// import http from './HttpService'
+import Http from './HttpService';
 
-import axios, { AxiosRequestConfig, AxiosPromise } from 'axios';
+// import axios, { AxiosRequestConfig, AxiosPromise } from 'axios';
 
 class PingService {
 
     ping(): void {
-        axios.get('http://localhost:9090/registrationservice/ping')
+        Http.get('/ping')
             .then(function(response) {
                 console.log(response)
             })
             .catch(function(error) {
                 console.log(error)
             })
-            .then(function() {
-                console.log('finished')
+            .finally(function() {
+                console.log('ping finished')
+            });
+    }
+
+    login(): void {
+        Http.post('/login')
+            .then(function(response) {
+                console.log(response);
             })
+            .catch(function(error) {
+                console.log(error);
+            })
+            .finally(function() {
+                console.log('login finished');
+            });
     }
 
 }
