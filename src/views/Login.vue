@@ -32,6 +32,7 @@ import PingService from '../services/LoginLogoutService';
 export default class Login extends Vue {
     startLogin(): void {
         console.log('Login :: startLogin');
+        PingService.ping();
         PingService.login();
     }
 

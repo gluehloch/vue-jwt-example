@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const myAxios = axios.create({
-    baseURL: 'http://localhost:9090/registrationservice',
+    baseURL: process.env.REGISTER,
     headers: {
         'Content-type': 'application/json'
     }

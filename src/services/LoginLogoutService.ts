@@ -4,20 +4,26 @@ import Http from './HttpService';
 
 class PingService {
 
+    private logEnv(): void {
+        console.log('Register Host Address:', process.env.REGISTER);
+    }
+
     ping(): void {
         Http.get('/ping')
-            .then(function(response) {
-                console.log(response)
+            .then((response) => {
+                this.logEnv();
+                console.log(response);
             })
-            .catch(function(error) {
-                console.log(error)
+            .catch((error) => {
+                console.log(error);
             })
-            .finally(function() {
-                console.log('ping finished')
+            .finally(() => {
+                console.log('ping finished');
             });
     }
 
     login(): void {
+        this.logEnv();
         Http.post('/login')
             .then(function(response) {
                 console.log(response);
