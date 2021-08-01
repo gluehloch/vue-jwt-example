@@ -10,11 +10,11 @@ class PingService {
 
     ping(): void {
         Http.get('/ping')
-            .then((response) => {
+            .then((response: any) => {
                 this.logEnv();
                 console.log(response);
             })
-            .catch((error) => {
+            .catch((error: any) => {
                 console.log(error);
             })
             .finally(() => {
@@ -25,10 +25,10 @@ class PingService {
     login(): void {
         this.logEnv();
         Http.post('/login')
-            .then(function(response) {
+            .then(function(response: any) {
                 console.log(response);
             })
-            .catch(function(error) {
+            .catch(function(error: any) {
                 console.log(error);
             })
             .finally(function() {
