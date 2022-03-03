@@ -16,6 +16,10 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
+            <div class="form-group">
+                <label for="dropdown-typeahead">Dropdown Typeahead</label>
+                <v-select :options="['Canada', 'United States']"></v-select>
+            </div>
             <button type="submit" class="btn btn-primary"
                 v-on:click="startLogin()">Submit</button>
             <button type="button" class="btn btn-secondary"
