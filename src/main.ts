@@ -5,9 +5,13 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'vue-select/dist/vue-select.css';
+
+import jQuery from 'jquery';
+import Popper from 'popper.js';
+import { version } from 'chai';
 
 Vue.config.productionTip = false
 
@@ -15,6 +19,9 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+
+Vue.use(Popper);
+Vue.use(jQuery);
 
 Vue.component('v-select', vSelect);
 
