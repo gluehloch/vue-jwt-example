@@ -30,5 +30,11 @@ npm run test:e2e
 npm run lint
 ```
 
+### Visual Codes setup
+
+`https://code.visualstudio.com/docs/nodejs/vuejs-tutorial`
+
+Install the `vetur` extension.
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
